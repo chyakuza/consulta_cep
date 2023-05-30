@@ -11,7 +11,7 @@ class ConsultaWsCep {
       final response = await http.get(url);
       final json = response.body;
       final Map<String, dynamic> mapResponse = convert.json.decode(json);
-      print(mapResponse["erro"]);
+      print(mapResponse["Aqui deu erro"]);
       if (mapResponse["erro"] != true){
         if (response.statusCode == 200){
           Cep cep = Cep.fromJson(mapResponse);
